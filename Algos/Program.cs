@@ -28,7 +28,9 @@ class Solution
 
       // LC167_TwoSumIIInputArrayIsSorted.run_TwoSumIIInputArrayIsSorted();
 
-        CheatSheet.getPriorityQueue();
+       // CheatSheet.getPriorityQueue();
+
+       CheatSheet.adhocOperation();
     }
 }
 

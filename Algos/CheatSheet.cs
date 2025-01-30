@@ -1,5 +1,119 @@
+using System.Text;
+
 class CheatSheet
 {
+    public static void adhocOperation(){
+
+
+        Console.WriteLine("****************************************************************");
+        Console.WriteLine("****************     String Ops         **************");
+        Console.WriteLine("****************************************************************");
+
+        string str = "abc";
+        Console.WriteLine("str -> " + str);
+        Console.WriteLine(" Length of Str " + str.Length);
+        Console.WriteLine("****************************************************************");
+
+        Console.WriteLine("****************************************************************");
+        Console.WriteLine("****************     String to Char Array         **************");
+        Console.WriteLine("****************************************************************");
+
+        str = "abc";
+        char[] ch_arr = str.ToCharArray();
+
+        foreach(char c1 in ch_arr){
+            Console.Write(c1+",");
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("****************************************************************");
+
+
+        Console.WriteLine("****************************************************************");
+        Console.WriteLine("****************     StringBuilder                **************");
+        Console.WriteLine("****************************************************************");
+
+        StringBuilder sb = new StringBuilder();
+        sb.Append("abc");
+        Console.WriteLine("StringBuilder --> " + sb.ToString());
+        Console.WriteLine(" Length of sb " + sb.Length);
+
+        Console.WriteLine("**************  Remove Last char from sb  ********************");
+
+        sb.Remove(sb.Length - 1, 1);
+        Console.WriteLine("StringBuilder --> " + sb.ToString());
+        Console.WriteLine(" Length of sb " + sb.Length);
+        Console.WriteLine();
+
+        Console.WriteLine("**************  Remove First char from sb  ********************");
+
+        sb.Remove(0, 1);
+        Console.WriteLine("StringBuilder --> " + sb.ToString());
+        Console.WriteLine(" Length of sb " + sb.Length);
+        Console.WriteLine();
+        Console.WriteLine("****************************************************************");
+
+        Console.WriteLine("****************************************************************");
+        Console.WriteLine("****************     Data Type Conversions        **************");
+        Console.WriteLine("****************************************************************");
+
+        Console.WriteLine("****************     int and Double to String       **************");
+
+        int a = 10;
+        double b = 10.5;
+        string str_a = a.ToString();
+        string str_b = b.ToString();
+
+        Console.WriteLine("int a -> " + a + " to String str_a -> " + str_a);
+        Console.WriteLine("double b -> " + b + " to String str_b -> " + str_b);
+
+
+        Console.WriteLine("****************   String to int and Double       **************");
+
+        Console.WriteLine("String str_a -> " + str_a + " to int a -> " + int.Parse(str_a));
+        Console.WriteLine("String str_b -> " + str_b + " to double b -> " + double.Parse(str_b));
+
+
+        Console.WriteLine("****************   char to int       **************");
+
+        char c = '1';
+        int c_i = c - '0';
+        Console.WriteLine("char c -> " + c + " to int c_i -> " + c_i);
+
+        Console.WriteLine("****************   int to char      **************");
+
+        int c_i2 = 1;
+        char c2 = (char)(c_i2 + '0');
+        Console.WriteLine("int c_i2 -> " + c_i2 + " to char c2 -> " + c2);
+        
+        Console.WriteLine("****************************************************************");
+
+        
+        Console.WriteLine("****************     List to Array       **************");
+        List<int> nums = new List<int>(){1,2,3,4,5};
+        int[] arr = nums.ToArray();
+
+        foreach(int n in arr){
+            Console.Write(n + ",");
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("****************************************************************");
+
+        Console.WriteLine("****************     Array to List       **************");
+        int[] arr2 = new int[]{1,2,3,4,5};
+        List<int> nums2 = arr2.ToList();
+
+        foreach(int n in nums2){
+            Console.Write(n + ",");
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("****************************************************************");
+
+    }
+
+
     public static SortedDictionary<string, int> getTrees()
     {
         //Trees (TreeSet and TreeMap are not directly available, but you can use SortedSet and SortedDictionary):
