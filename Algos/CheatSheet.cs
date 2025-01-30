@@ -112,6 +112,51 @@ class CheatSheet
             Console.WriteLine(num);
         }
 
+Console.WriteLine("*********");
+        List<List<int>> ll = new List<List<int>>(){
+            new List<int>(){1,2,3},
+            new List<int>(){4,5,6},
+            new List<int>(){7,8,9}
+        };
+
+        ll[1].Add(10);
+
+        foreach (List<int> l in ll)
+        {
+            foreach (int num in l)
+            {
+                Console.WriteLine(num);
+            }
+        }
+    }
+
+    public static void getPriorityQueue(){
+        // Declaration and initialization
+        PriorityQueue<int, int> pq = new PriorityQueue<int, int>();
+
+        // Enqueue
+        pq.Enqueue(1, -1);
+        pq.Enqueue(2, -2);
+        pq.Enqueue(3,-3 );
+
+        // Dequeue
+        while (pq.Count > 0)
+        {
+            Console.WriteLine(pq.Dequeue());
+        }
+
+        PriorityQueue<(int, List<int>), int> pq2 = new PriorityQueue<(int, List<int>), int>();
+        List<int> l1 = new List<int>(){1,2,3};
+        List<int> l2 = new List<int>(){4,5,6};
+
+        pq2.Enqueue((1, l1), -1);
+        pq2.Enqueue((2, l2), -2);
+
+        while (pq2.Count > 0)
+        {
+            Console.WriteLine(pq2.Dequeue());
+        }
+
     }
 
 

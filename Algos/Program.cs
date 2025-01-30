@@ -26,8 +26,9 @@ class Solution
 
        //LC125_ValidPalindrome.run_ValidPalindrome();
 
-       LC167_TwoSumIIInputArrayIsSorted.run_TwoSumIIInputArrayIsSorted();
+      // LC167_TwoSumIIInputArrayIsSorted.run_TwoSumIIInputArrayIsSorted();
 
+        CheatSheet.getPriorityQueue();
     }
 }
 
