@@ -38,6 +38,16 @@ class CheatSheet
         Console.WriteLine("StringBuilder --> " + sb.ToString());
         Console.WriteLine(" Length of sb " + sb.Length);
 
+        sb.ToString().Reverse();  
+
+        if(sb[0] == '/'){
+            sb.Remove(0,1);
+        }
+
+        if(sb[sb.Length-1] != '/'){
+            sb.Append("/");
+        }      
+
         Console.WriteLine("**************  Remove Last char from sb  ********************");
 
         sb.Remove(sb.Length - 1, 1);
@@ -111,6 +121,50 @@ class CheatSheet
         Console.WriteLine();
         Console.WriteLine("****************************************************************");
 
+        Console.WriteLine("****************     2D array       **************");
+
+        int[][] arr1 = new int[2][];
+        arr1[0] = new int[]{1,2,3};
+        arr1[1] = new int[]{4,5,6};
+
+        foreach(int[] a1 in arr1){
+            foreach(int n in a1){
+                Console.Write(n + ",");
+            }
+            Console.WriteLine();
+        }
+
+        //Jagged array
+
+        int[,] arr3 = new int[2,3]{{1,2,3},{4,5,6}};
+
+       // arr3[2,0] = 7;
+        arr3[1, 0] = 7;
+        arr3[1, 1] = 8;
+        arr3[1, 2] = 9;
+
+        for(int i=0; i<2; i++){
+            for(int j=0; j<3; j++){
+                Console.Write(arr3[i,j] + ",");
+            }
+            Console.WriteLine();
+        }
+
+        Console.WriteLine("****************************************************************");
+
+        Console.WriteLine("****************     2D List       **************");
+
+        List<List<int>> ll = new List<List<int>>(){
+            new List<int>(){1,2,3},
+            new List<int>(){4,5,6},
+            new List<int>(){7,8,9}
+        };
+
+        int[][] arr4 = new int[ll.Count][];
+        for(int i=0; i<ll.Count; i++){
+            arr4[i] = ll[i].ToArray();
+        }
+        
     }
 
 
