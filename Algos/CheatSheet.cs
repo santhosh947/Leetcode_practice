@@ -246,6 +246,8 @@ class CheatSheet
         // Accessing values
         int value = myDict["Two"];
 
+        myDict["Four"] = 4;
+
         Console.WriteLine(value);
     }
 
@@ -332,6 +334,11 @@ Console.WriteLine("*********");
     {
         // HashSet
         HashSet<int> intSet = new HashSet<int> { 10, 2, 3, 4, 5 };
+        intSet.Add(1);
+
+        intSet.Contains(1); // true 
+
+
 
         // SortedSet
         SortedSet<int> sortedIntSet = new SortedSet<int> { 5, 4, 3, 2, 1 };
